@@ -1,0 +1,110 @@
+.comparison h2 {
+  text-align: left;
+  color: #00595A;
+  font-size: 32px !important;
+  font-weight: bold;
+}
+
+.comparison__table tr.comparison__table-row-5 td:first-child {
+  width: 180px;
+}
+
+.comparison__table td {
+  vertical-align: top;
+}
+
+.comparison__table thead td {
+  padding-bottom: 15px;
+  vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+}
+
+.comparison__table tr {
+  padding: 0;
+}
+
+.comparison__more-btn-container {
+  position: relative;
+  padding: 8px 0;
+  z-index: 3;
+}
+
+.comparison__more-btn {
+  background-color: #F5F5FE;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.comparison__more-btn_active svg {
+  transform: rotate(180deg);
+}
+
+.comparison__more-btn > svg {
+  background-color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+}
+
+.comparison tr {
+  border: none;
+}
+
+.comparison__table-content td:not(:first-child) {
+  padding: 0;
+  padding-bottom: 8px;
+}
+
+.comparison__table-content-card {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  background-color: #F0F8F8;
+}
+
+.comparison__table-content {
+  position: relative;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.comparison__table-content_hidden {
+  height: 0;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.comparison__table-content div {
+  height: 100%;
+  transition: padding 0.1s;
+}
+
+.comparison__table-content_hidden div {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+.comparison__table-content_hidden td {
+  height: 0;
+  padding-bottom: 0;
+  transition: padding-bottom 0.3s;
+}
+
+.comparison tbody {
+  position: relative;
+}
