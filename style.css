@@ -133,6 +133,17 @@
 
 .comparison__table-container {
   position: relative;
+  scrollbar-color: #00848A #F0F8F8;
+  scrollbar-width: thin;
+}
+
+.comparison__table-container::-webkit-scrollbar-thumb {
+  background: #F0F8F8;
+}
+
+.comparison__table-container::-webkit-scrollbar-thumb {
+  background: #00848A;
+  border-radius: 6px;
 }
 
 @media (max-width: 1200px) {
