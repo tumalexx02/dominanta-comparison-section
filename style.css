@@ -10,7 +10,7 @@
 }
 
 .comparison__table {
-  width: 1116px;
+  min-width: 1116px;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -132,6 +132,83 @@
 }
 
 .comparison__table-container {
-  overflow-x: auto;
-  overflow-y: hidden;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .comparison__table-container {
+    min-width: calc((100vw - 100%) / 2 + 100%);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .comparison__table-shade {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    height: 100%;
+    width: 140px;
+    z-index: 5;
+    transition: opacity 0.1s;
+    pointer-events: none;
+  }
+
+  .comparison__table-shade_hidden {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .comparison__table {
+      border: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      table-layout: auto;
+  }
+
+  .comparison__table thead {
+      border: none;
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      font-size: 16px;
+      padding: 0;
+      position: static;
+      width: 100%;
+  }
+
+  .comparison__table tr {
+      display: table-row;
+      margin-bottom: 0;
+  }
+
+  .comparison__table thead td {
+    font-size: 16px;
+}
+
+  .comparison__table td {
+      border-bottom: none;
+      display: table-cell;
+      font-size: 14px;
+      text-align: left;
+  }
+
+  .comparison__table td::before {
+      content: none;
+  }
+
+  .comparison__table td:last-child {
+      border-bottom: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .comparison__table-shade {
+    width: 70px;
+  }
 }
