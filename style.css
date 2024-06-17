@@ -13,10 +13,17 @@
   min-width: 1116px;
   overflow-x: auto;
   overflow-y: hidden;
+  position: relative;
 }
 
 .comparison__table td {
   vertical-align: top;
+}
+
+.comparison__table thead {
+  position: relative;
+  background-color: #fff;
+  z-index: 3;
 }
 
 .comparison__table thead td {
@@ -24,6 +31,7 @@
   vertical-align: top;
   text-align: left;
   font-weight: bold;
+  background-color: #fff;
 }
 
 .comparison__table tr {
@@ -34,6 +42,7 @@
   position: relative;
   padding: 8px 0;
   z-index: 3;
+  background-color: #fff;
 }
 
 .comparison__more-btn {
@@ -95,36 +104,40 @@
 }
 
 .comparison__table-content {
+  overflow: hidden;
+  background-color: #fff;
   position: relative;
   height: 100%;
   opacity: 1;
-  transition: height 0.3s ease, transform 0.2s ease;
+  transition: height 0.5s ease;
   z-index: 1;
 }
 
 .comparison__table-content_hidden {
   height: 0;
-  max-height: 0;
   opacity: 0;
   pointer-events: none;
 }
 
 .comparison__table-content div {
-  height: 100%;
-  transition: padding 0.1s;
+  max-height: 300px;
+  opacity: 1;
+  transition: padding 0.5s ease, max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .comparison__table-content_hidden div {
-  height: 0;
+  max-height: 0;
   padding-top: 0;
   padding-bottom: 0;
+  opacity: 0;
   color: #fff;
 }
 
 .comparison__table-content_hidden td {
   height: 0;
   padding: 0 !important;
-  transition: padding 0.3s;
+  transform: translateY(-100%);
+  transition: padding 0.5s, height 0.5s;
 }
 
 .comparison tbody {
@@ -163,7 +176,7 @@
     height: 100%;
     width: 140px;
     z-index: 5;
-    transition: opacity 0.1s;
+    transition: opacity 0.5s;
     pointer-events: none;
   }
 
