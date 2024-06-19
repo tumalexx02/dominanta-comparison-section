@@ -150,7 +150,7 @@
   display: block;
   width: 100%;
   position: relative;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 8px;
   scrollbar-color: #00848A #F0F8F8;
