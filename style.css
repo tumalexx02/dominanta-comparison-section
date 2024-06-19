@@ -1,5 +1,5 @@
 .comparison h2 {
-  text-align: left;
+  text-align: center;
   color: #00595A;
   font-size: 32px !important;
   font-weight: bold;
@@ -67,6 +67,7 @@
   width: 28px;
   height: 28px;
   border-radius: 5px;
+  pointer-events: none;
 }
 
 .comparison tr {
