@@ -3,7 +3,7 @@ const tableContainer = document.querySelector('.comparison__table-container');
 const shade = document.querySelector('.comparison__table-shade');
 const theadElementsCount = document.querySelectorAll('.comparison__table thead td').length;
 
-if (theadElementsCount > 4) {
+if (theadElementsCount > 5) {
   tableContainer.style.overflowX = 'scroll';
 } else {
   tableContainer.style.overflowX = 'auto';
